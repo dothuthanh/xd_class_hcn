@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="500" style="border: 1px solid yellow"></canvas>
+<button onclick="creatRectangle()">hinh</button>
+<script>
+    let Rectangle = function (x,y) {
+        this.x = x;
+        this.y = y;
+        this.getArea = function () {
+            return x * y;
+        }
+        this.getC = function () {
+            return (x + y) * 2;
+        }
+    }
+        let rectangle = new Rectangle(6, 3);
+        let area = rectangle.getArea();
+        let c = rectangle.getC();
+        alert("dien tich" + area + "chu vi" + c);
+    function creatRectangle() {
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0,0,400,200);
+
+    }
+</script>
+</body>
+</html>
